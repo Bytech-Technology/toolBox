@@ -1,11 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hola
+<%- include("partials/head", { app: app, title: app.name }) %>
+<%- include("partials/home-header", { app: app }) %>
+
+
+<main class="home">
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>
+            Todas tus herramientas
+            <span>en un solo lugar</span>
+        </h1>
+        <p><%= app.description %></p>
+
+
+        <!-- SEARCH -->
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="search" id="tool-search" class="search-input" placeholder="Buscar una herramienta..." autocomplete="off">
+        </div>
+    </section>
+
+
+    <div id="search-empty" class="search-empty" hidden>
+        <h2>No encontramos ninguna herramienta</h2>
+        <p>Probá buscando por nombre, categoría o palabra clave.</p>
+    </div>
+    
+    <!-- CATEGORÍAS -->
+    <section class="categories-section">
+        <% categories.forEach(category => { %>
+            <div class="tools-section category-section" data-category="<%= category.id %>">
+                <div class="section-header">
+                    <div>
+                        <h2>
+                            <span class="category-icon"><%= category.icon %></span>
+                            <%= category.name %>
+                        </h2>
+                        <p><%= category.description %></p>
+                    </div>
+                </div>
+
+                <div class="tools-grid">
+                    <% category.tools.forEach(tool => { %>
+                        <a
+                            href="<%= tool.route %>"
+                            class="tool-card"
+                            data-name="<%= tool.name.toLowerCase() %>"
+                            data-description="<%= tool.description.toLowerCase() %>"
+                            data-tags="<%= tool.tags.join(' ').toLowerCase() %>"
+                        >
+
+                            <div class="tool-card-icon"><%= tool.icon %></div>
+                            <div class="tool-card-content">
+                                <h3><%= tool.name %></h3>
+                                <p><%= tool.shortDescription %></p>
+                            </div>
+                        </a>
+                    <% }); %>
+                </div>
+            </div>
+        <% }); %>
+    </section>
+</main>
+
+<script src="/js/app.js"></script>
 </body>
 </html>
