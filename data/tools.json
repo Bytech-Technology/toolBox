@@ -1,0 +1,433 @@
+{
+  "app": {
+    "name": "Mega Toolbox",
+    "version": "1.0.0",
+    "description": "Una colección de herramientas útiles para el día a día.",
+    "language": "es",
+    "status": "development"
+  },
+  "categories": [
+    {
+      "id": "math",
+      "name": "Matemática",
+      "icon": "calculator",
+      "description": "Herramientas para realizar cálculos y operaciones matemáticas.",
+      "order": 1,
+      "tools": [
+        {
+          "id": "calculator",
+          "name": "Calculadora",
+          "icon": "calculator",
+          "description": "Realiza cálculos matemáticos básicos de forma rápida y sencilla.",
+          "shortDescription": "Calculadora matemática básica.",
+          "route": "/tools/calculator",
+          "status": "active",
+          "tags": [
+            "calcular",
+            "operaciones",
+            "matematica",
+            "numeros"
+          ]
+        },
+        {
+          "id": "percentage",
+          "name": "Calculadora de porcentajes",
+          "icon": "percent",
+          "description": "Calcula porcentajes, descuentos, aumentos y variaciones entre valores.",
+          "shortDescription": "Calcula porcentajes, descuentos y aumentos.",
+          "route": "/tools/percentage",
+          "status": "active",
+          "tags": [
+            "porcentaje",
+            "descuento",
+            "aumento",
+            "matematica"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "converters",
+      "name": "Conversores",
+      "icon": "repeat",
+      "description": "Convierte valores entre diferentes unidades y formatos.",
+      "order": 2,
+      "tools": [
+        {
+          "id": "unit-converter",
+          "name": "Conversor de unidades",
+          "icon": "ruler",
+          "description": "Convierte valores de longitud, peso, temperatura, volumen, velocidad y otras unidades.",
+          "shortDescription": "Convierte diferentes unidades de medida.",
+          "route": "/tools/unit-converter",
+          "status": "active",
+          "tags": [
+            "unidades",
+            "metros",
+            "kilometros",
+            "peso",
+            "temperatura",
+            "volumen",
+            "conversion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "finance",
+      "name": "Finanzas",
+      "icon": "wallet",
+      "description": "Herramientas sencillas para cálculos y conversiones financieras.",
+      "order": 3,
+      "tools": [
+        {
+          "id": "currency-converter",
+          "name": "Conversor de monedas",
+          "icon": "coins",
+          "description": "Convierte valores entre diferentes monedas utilizando tasas de cambio.",
+          "shortDescription": "Convierte valores entre monedas.",
+          "route": "/tools/currency-converter",
+          "status": "active",
+          "tags": [
+            "moneda",
+            "dinero",
+            "dolar",
+            "euro",
+            "peso",
+            "conversion"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "date-time",
+      "name": "Fecha y tiempo",
+      "icon": "calendar",
+      "description": "Herramientas para trabajar con fechas, períodos y tiempo.",
+      "order": 4,
+      "tools": [
+        {
+          "id": "date-calculator",
+          "name": "Calculadora de fechas",
+          "icon": "calendar-days",
+          "description": "Calcula diferencias entre fechas y permite sumar o restar días, semanas, meses y años.",
+          "shortDescription": "Calcula diferencias y operaciones con fechas.",
+          "route": "/tools/date-calculator",
+          "status": "active",
+          "tags": [
+            "fecha",
+            "dias",
+            "tiempo",
+            "calendario",
+            "diferencia"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Seguridad",
+      "icon": "shield",
+      "description": "Herramientas para generar y comprobar información relacionada con seguridad digital.",
+      "order": 5,
+      "tools": [
+        {
+          "id": "password-generator",
+          "name": "Generador de contraseñas",
+          "icon": "key",
+          "description": "Genera contraseñas aleatorias y personalizables con diferentes niveles de complejidad.",
+          "shortDescription": "Genera contraseñas seguras y aleatorias.",
+          "route": "/tools/password-generator",
+          "status": "active",
+          "tags": [
+            "password",
+            "contraseña",
+            "seguridad",
+            "generador",
+            "aleatorio"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "text",
+      "name": "Texto",
+      "icon": "file-text",
+      "description": "Herramientas para analizar, transformar y trabajar con texto.",
+      "order": 6,
+      "tools": [
+        {
+          "id": "text-counter",
+          "name": "Contador de texto",
+          "icon": "hash",
+          "description": "Cuenta palabras, caracteres, líneas y otros elementos de un texto.",
+          "shortDescription": "Cuenta palabras, caracteres y líneas.",
+          "route": "/tools/text-counter",
+          "status": "active",
+          "tags": [
+            "texto",
+            "palabras",
+            "caracteres",
+            "lineas",
+            "contador"
+          ]
+        },
+        {
+          "id": "text-case",
+          "name": "Conversor de texto",
+          "icon": "case-sensitive",
+          "description": "Convierte texto entre mayúsculas, minúsculas, capitalización y otros formatos.",
+          "shortDescription": "Cambia el formato y capitalización del texto.",
+          "route": "/tools/text-case",
+          "status": "active",
+          "tags": [
+            "texto",
+            "mayusculas",
+            "minusculas",
+            "capitalizar",
+            "formato"
+          ]
+        },
+        {
+          "id": "text-editor",
+          "name": "Editor de texto",
+          "icon": "notebook-pen",
+          "description": "Permite limpiar, ordenar, modificar y transformar texto de diferentes maneras.",
+          "shortDescription": "Edita y transforma texto rápidamente.",
+          "route": "/tools/text-editor",
+          "status": "active",
+          "tags": [
+            "texto",
+            "editor",
+            "limpiar",
+            "ordenar",
+            "transformar"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "documents",
+      "name": "Documentos",
+      "icon": "file",
+      "description": "Herramientas para trabajar con documentos y archivos PDF.",
+      "order": 7,
+      "tools": [
+        {
+          "id": "pdf-to-images",
+          "name": "PDF a imágenes",
+          "icon": "file-image",
+          "description": "Convierte las páginas de un documento PDF en imágenes individuales.",
+          "shortDescription": "Convierte páginas PDF en imágenes.",
+          "route": "/tools/pdf-to-images",
+          "status": "active",
+          "tags": [
+            "pdf",
+            "documento",
+            "imagen",
+            "convertir"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "images",
+      "name": "Imágenes",
+      "icon": "image",
+      "description": "Herramientas para convertir, comprimir y modificar imágenes.",
+      "order": 8,
+      "tools": [
+        {
+          "id": "image-compressor",
+          "name": "Comprimir imágenes",
+          "icon": "minimize",
+          "description": "Reduce el tamaño de una imagen intentando mantener la mayor calidad posible.",
+          "shortDescription": "Reduce el tamaño de tus imágenes.",
+          "route": "/tools/image-compressor",
+          "status": "active",
+          "tags": [
+            "imagen",
+            "comprimir",
+            "peso",
+            "optimizar",
+            "jpg",
+            "png",
+            "webp"
+          ]
+        },
+        {
+          "id": "image-resizer",
+          "name": "Redimensionar imágenes",
+          "icon": "maximize",
+          "description": "Cambia el ancho y alto de una imagen manteniendo o modificando su proporción.",
+          "shortDescription": "Cambia las dimensiones de una imagen.",
+          "route": "/tools/image-resizer",
+          "status": "active",
+          "tags": [
+            "imagen",
+            "redimensionar",
+            "resolucion",
+            "tamaño",
+            "pixeles"
+          ]
+        },
+        {
+          "id": "image-converter",
+          "name": "Convertir imágenes",
+          "icon": "images",
+          "description": "Convierte imágenes entre formatos como PNG, JPG y WebP.",
+          "shortDescription": "Convierte imágenes entre diferentes formatos.",
+          "route": "/tools/image-converter",
+          "status": "active",
+          "tags": [
+            "imagen",
+            "convertir",
+            "png",
+            "jpg",
+            "jpeg",
+            "webp"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Diseño",
+      "icon": "palette",
+      "description": "Herramientas para trabajar con colores y elementos visuales.",
+      "order": 9,
+      "tools": [
+        {
+          "id": "color-picker",
+          "name": "Selector de colores",
+          "icon": "pipette",
+          "description": "Selecciona colores y obtiene sus valores HEX, RGB y HSL.",
+          "shortDescription": "Obtén información de cualquier color.",
+          "route": "/tools/color-picker",
+          "status": "active",
+          "tags": [
+            "color",
+            "hex",
+            "rgb",
+            "hsl",
+            "diseño"
+          ]
+        },
+        {
+          "id": "color-palette",
+          "name": "Generador de paletas",
+          "icon": "swatches",
+          "description": "Genera combinaciones de colores para proyectos de diseño y desarrollo.",
+          "shortDescription": "Genera paletas de colores.",
+          "route": "/tools/color-palette",
+          "status": "active",
+          "tags": [
+            "color",
+            "paleta",
+            "diseño",
+            "colores",
+            "hex"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generators",
+      "name": "Generadores",
+      "icon": "wand",
+      "description": "Generadores rápidos para crear diferentes tipos de contenido.",
+      "order": 10,
+      "tools": [
+        {
+          "id": "qr-generator",
+          "name": "Generador de QR",
+          "icon": "qr-code",
+          "description": "Genera códigos QR a partir de texto, enlaces y otros datos.",
+          "shortDescription": "Crea códigos QR rápidamente.",
+          "route": "/tools/qr-generator",
+          "status": "active",
+          "tags": [
+            "qr",
+            "codigo",
+            "enlace",
+            "url",
+            "generador"
+          ]
+        },
+        {
+          "id": "random-generator",
+          "name": "Generador aleatorio",
+          "icon": "dice",
+          "description": "Genera números, cadenas, listas y otros valores aleatorios.",
+          "shortDescription": "Genera diferentes tipos de datos aleatorios.",
+          "route": "/tools/random-generator",
+          "status": "active",
+          "tags": [
+            "random",
+            "aleatorio",
+            "numero",
+            "lista",
+            "generador"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "development",
+      "name": "Desarrollo y Web",
+      "icon": "code",
+      "description": "Herramientas útiles para desarrolladores y usuarios que trabajan con datos web.",
+      "order": 11,
+      "tools": [
+        {
+          "id": "json-formatter",
+          "name": "JSON Formatter",
+          "icon": "braces",
+          "description": "Formatea, valida y organiza estructuras JSON para facilitar su lectura.",
+          "shortDescription": "Formatea y valida JSON.",
+          "route": "/tools/json-formatter",
+          "status": "active",
+          "tags": [
+            "json",
+            "formatter",
+            "developer",
+            "codigo",
+            "validar"
+          ]
+        },
+        {
+          "id": "base64",
+          "name": "Base64 Encoder / Decoder",
+          "icon": "binary",
+          "description": "Codifica texto en Base64 o decodifica contenido Base64 a texto.",
+          "shortDescription": "Codifica y decodifica Base64.",
+          "route": "/tools/base64",
+          "status": "active",
+          "tags": [
+            "base64",
+            "encode",
+            "decode",
+            "codigo",
+            "texto"
+          ]
+        },
+        {
+          "id": "url-encoder",
+          "name": "URL Encoder / Decoder",
+          "icon": "link",
+          "description": "Codifica y decodifica URLs y parámetros para utilizarlos correctamente en la web.",
+          "shortDescription": "Codifica y decodifica URLs.",
+          "route": "/tools/url-encoder",
+          "status": "active",
+          "tags": [
+            "url",
+            "encode",
+            "decode",
+            "web",
+            "link"
+          ]
+        }
+      ]
+    }
+  ]
+}
