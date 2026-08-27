@@ -1,0 +1,28 @@
+<div class="theme-selector <%= typeof variant !== 'undefined' ? variant : 'header' %>">
+
+    <button class="theme-button" type="button" aria-label="Cambiar tema" title="Cambiar tema">
+        <span class="theme-button-icon">🌓</span>
+
+        <% if (typeof variant !== 'undefined' && variant === 'sidebar') { %>
+            <span>Tema</span>
+        <% } %>
+    </button>
+
+
+    <div class="theme-menu" hidden>
+        <button type="button" class="theme-option" data-theme-option="light">
+            <span>☀️</span>
+            <span>Claro</span>
+        </button>
+
+        <button type="button" class="theme-option" data-theme-option="dark">
+            <span>🌙</span>
+            <span>Oscuro</span>
+        </button>
+
+        <button type="button" class="theme-option" data-theme-option="system">
+            <span>🖥️</span>
+            <span>Sistema</span>
+        </button>
+    </div>
+</div>
