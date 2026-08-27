@@ -1,0 +1,62 @@
+<aside class="tool-sidebar">
+
+    <!-- BRAND -->
+    <div class="sidebar-brand">
+        <a href="/" class="brand">
+            <span class="brand-icon">⚡</span>
+            <span class="brand-name"><%= app.name %></span>
+        </a>
+    </div>
+
+    <!-- NAVEGACIÓN FIJA -->
+    <nav class="sidebar-navigation">
+        <a href="/" class="sidebar-link">
+            <span>🏠</span>
+            <span>Inicio</span>
+        </a>
+
+        <button type="button" class="sidebar-link sidebar-search-button">
+            <span>🔍</span>
+            <span>Buscar</span>
+        </button>
+    </nav>
+
+
+    <div class="sidebar-divider"></div>
+
+    <!-- CATEGORÍAS CON SCROLL -->
+    <div class="sidebar-categories">
+        <div class="sidebar-title">CATEGORÍAS</div>
+
+        <div class="sidebar-category-list">
+            <% categories.forEach(category => { %>
+                <div class="sidebar-category">
+                    <div class="sidebar-category-title">
+                        <span><%= category.icon %></span>
+                        <span><%= category.name %></span>
+                    </div>
+
+                    <div class="sidebar-tools">
+                        <% category.tools.forEach(categoryTool => { %>
+                            <a
+                                href="<%= categoryTool.route %>"
+                                class="sidebar-tool <%= categoryTool.id === tool.id ? 'active' : '' %>"
+                            >
+                                <%= categoryTool.name %>
+                            </a>
+                        <% }); %>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+    <div class="sidebar-footer">
+
+    <%- include("theme-selector", {
+        variant: "sidebar"
+    }) %>
+
+</div>
+
+
+</aside>
