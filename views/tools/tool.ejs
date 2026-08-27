@@ -1,0 +1,44 @@
+<%- include("../partials/head", {
+    app: app,
+    title: tool.name
+}) %>
+
+<link rel="stylesheet" href="/css/tool.css">
+
+
+<div class="tool-page">
+
+    <%- include("../partials/tool-sidebar", {
+        app: app,
+        categories: categories,
+        tool: tool
+    }) %>
+
+
+    <main class="tool-content">
+
+        <%- include("../partials/tool-header", {
+            category: category,
+            tool: tool
+        }) %>
+
+
+        <section class="tool-workspace">
+
+            <div class="tool-placeholder">
+
+                <p>
+                    Esta herramienta todavía está en desarrollo.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+</body>
+</html>
