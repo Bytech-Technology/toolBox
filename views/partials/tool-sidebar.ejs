@@ -21,6 +21,14 @@
         </button>
     </nav>
 
+    <div class="sidebar-search" hidden>
+        <div class="sidebar-search-input-container">
+            <span>🔍</span>
+            <button type="button" class="sidebar-search-close" aria-label="Cerrar búsqueda">X</button>
+            <input type="search" class="sidebar-search-input" placeholder="Buscar herramienta..." autocomplete="off">
+        </div>
+        <div class="sidebar-search-results"></div>
+    </div>
 
     <div class="sidebar-divider"></div>
 
@@ -41,6 +49,10 @@
                             <a
                                 href="<%= categoryTool.route %>"
                                 class="sidebar-tool <%= categoryTool.id === tool.id ? 'active' : '' %>"
+                                data-name="<%= categoryTool.name.toLowerCase() %>"
+                                data-description="<%= categoryTool.description.toLowerCase() %>"
+                                data-tags="<%= categoryTool.tags.join(' ').toLowerCase() %>"
+                                data-category="<%= category.id.toLowerCase() %>"
                             >
                                 <%= categoryTool.name %>
                             </a>
